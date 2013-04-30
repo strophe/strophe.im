@@ -10,10 +10,10 @@ to enable web-based, real-time XMPP applications that run in any browser.
 # Quick Links
 
 * [Latest documentation](doc/1.0.2)
-* [GitHub project page](https://github.com/metajack/strophejs)
+* [GitHub project page](https://github.com/strophe/strophejs)
 * [Mailing list](http://groups.google.com/group/strophe)
-* [Bug tracker](https://github.com/metajack/strophejs/issues)
-* [Community plugins](http://github.com/metajack/strophejs-plugins)
+* [Bug tracker](https://github.com/strophe/strophejs/issues)
+* [Community plugins](http://github.com/strophe/strophejs-plugins)
 
 # Downloads
 
@@ -21,10 +21,10 @@ to enable web-based, real-time XMPP applications that run in any browser.
 
 The latest release is **1.0.2**.
 
-* [strophejs-1.0.2.tar.gz](https://github.com/downloads/metajack/strophejs/strophejs-1.0.2.tar.gz)
-* [strophejs-1.0.2.zip](https://github.com/downloads/metajack/strophejs/strophejs-1.0.2.zip)
+* [strophejs-1.0.2.tar.gz](https://github.com/downloads/strophe/strophejs/strophejs-1.0.2.tar.gz)
+* [strophejs-1.0.2.zip](https://github.com/downloads/strophe/strophejs/strophejs-1.0.2.zip)
 
-Older releases can be found on the [project downloads page](https://github.com/metajack/strophejs/downloads).
+Older releases can be found on the [project downloads page](https://github.com/strophe/strophejs/downloads).
 
 ## Latest Development Code
 
@@ -32,8 +32,8 @@ Note that the following archives aren't not prepared for
 distribution. In order to create `strophe.js` and other derived files,
 you must first run `make`.
 
-* [strophejs-latest.tar.gz](https://github.com/metajack/strophejs/tarball/master)
-* [strophejs-latest.zip](https://github.com/metajack/strophejs/zipball/master)
+* [strophejs-laftest.tar.gz](https://github.com/strophe/strophejs/tarball/master)
+* [strophejs-latest.zip](https://github.com/strophe/strophejs/zipball/master)
 
 # Documentation & Tutorials
 
@@ -56,7 +56,7 @@ real-time game.
 # License
 
 Strophe.js is available under the [MIT
-license](https://github.com/metajack/strophejs/raw/master/LICENSE.txt).
+license](https://github.com/strophe/strophejs/raw/master/LICENSE.txt).
 
 # Author & History
 

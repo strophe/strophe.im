@@ -12,16 +12,16 @@ systems.
 # Quick Links
 
 * [Latest documentation](doc/0.8-snapshot)
-* [GitHub project page](https://github.com/metajack/libstrophe)
+* [GitHub project page](https://github.com/strophe/libstrophe)
 * [Mailing list](http://groups.google.com/group/libstrophe)
-* [Bug tracker](https://github.com/metajack/libstrophe/issues)
+* [Bug tracker](https://github.com/strophe/libstrophe/issues)
 
 # License
 
 libstrophe is dual licensed under the
-[MIT](https://github.com/metajack/libstrophe/raw/master/MIT-LICENSE.txt)
+[MIT](https://github.com/strophe/libstrophe/raw/master/MIT-LICENSE.txt)
 and
-[GPLv3](https://github.com/metajack/libstrophe/raw/master/GPL-LICENSE.txt)
+[GPLv3](https://github.com/strophe/libstrophe/raw/master/GPL-LICENSE.txt)
 licenses.
 
 # Author
