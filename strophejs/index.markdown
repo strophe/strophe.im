@@ -38,7 +38,7 @@ you must first run `make`.
 The following tutorials may help you get started:
 
 * [A short tutorial on Echobot by Alfred Westerveld](https://gist.github.com/272956)
-* [Anders Conbere's guide to BOSH, ejabberd, Firefox, and Strophe](http://anders.conbere.org/blog/2011/05/03/get_xmpp_-_bosh_working_with_ejabberd_firefox_and_strophe/)
+* [Anders Conbere's guide to BOSH, ejabberd, Firefox, and Strophe](http://anders.conbere.org/2011/05/03/get_xmpp_-_bosh_working_with_ejabberd_firefox_and_strophe.html)
 
 The official API documentation can be found below:
 
