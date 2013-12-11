@@ -23,7 +23,8 @@ There are currently two members of the Strophe family of libraries.
 [Strophe.js](http://strophe.im/strophejs) is a JavaScript
 implementation targeting browser-based clients. It uses
 [BOSH](http://xmpp.org/about-xmpp/technology-overview/bosh/), a
-binding of XMPP to HTTP using long polling. Strophe.js makes creating
+binding of XMPP to HTTP using long polling and WebSockets, a full-duplex
+single socket connection to a server. Strophe.js makes creating
 real-time web applications easy.
 
 ## libstrophe
