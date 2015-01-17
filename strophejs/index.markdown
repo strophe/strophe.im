@@ -4,7 +4,7 @@ subtitle: An XMPP library for JavaScript
 layout: base
 ---
 
-Strophe.js is an XMPP library for JavaScript. It is primary purpose is
+Strophe.js is an XMPP library for JavaScript. Its primary purpose is
 to enable web-based, real-time XMPP applications that run in any browser.
 
 # Quick Links
