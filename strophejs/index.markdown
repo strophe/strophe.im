@@ -19,10 +19,10 @@ to enable web-based, real-time XMPP applications that run in any browser.
 
 ## Official releases
 
-The latest release is **1.2.3**.
+The latest release is **1.2.4**.
 
-* [strophejs-1.2.3.tar.gz](https://github.com/strophe/strophejs/archive/v1.2.3.tar.gz)
-* [strophejs-1.2.3.zip](https://github.com/strophe/strophejs/archive/v1.2.3.zip)
+* [strophejs-1.2.4.tar.gz](https://github.com/strophe/strophejs/archive/v1.2.4.tar.gz)
+* [strophejs-1.2.4.zip](https://github.com/strophe/strophejs/archive/v1.2.4.zip)
 
 ## Latest Development Code
 
