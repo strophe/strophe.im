@@ -9,7 +9,7 @@ to enable web-based, real-time XMPP applications that run in any browser.
 
 # Quick Links
 
-* [Latest documentation](doc/1.2.15)
+* [Latest documentation](doc/1.3.0)
 * [GitHub project page](https://github.com/strophe/strophejs)
 * [Mailing list](http://groups.google.com/group/strophe)
 * [Bug tracker](https://github.com/strophe/strophejs/issues)
@@ -19,10 +19,10 @@ to enable web-based, real-time XMPP applications that run in any browser.
 
 ## Official releases
 
-The latest release is **1.2.15**.
+The latest release is **1.3.0**.
 
-* [strophejs-1.2.15.tar.gz](https://github.com/strophe/strophejs/archive/v1.2.15.tar.gz)
-* [strophejs-1.2.15.zip](https://github.com/strophe/strophejs/archive/v1.2.15.zip)
+* [strophejs-1.3.0.tar.gz](https://github.com/strophe/strophejs/archive/v1.3.0.tar.gz)
+* [strophejs-1.3.0.zip](https://github.com/strophe/strophejs/archive/v1.3.0.zip)
 
 ## Latest Development Code
 
@@ -42,7 +42,7 @@ The following tutorials may help you get started:
 
 The official API documentation can be found below:
 
-[Strophe.js API Documentation](doc/1.2.15)
+[Strophe.js API Documentation](doc/1.3.0)
 
 The book [Professional XMPP Programming with JavaScript and
 jQuery](http://professionalxmpp.com) is also available which covers
