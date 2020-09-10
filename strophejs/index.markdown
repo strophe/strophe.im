@@ -9,7 +9,7 @@ to enable web-based, real-time XMPP applications that run in any browser.
 
 # Quick Links
 
-* [Latest documentation](doc/1.3.5)
+* [Latest documentation](doc/1.4.0)
 * [GitHub project page](https://github.com/strophe/strophejs)
 * [Mailing list](http://groups.google.com/group/strophe)
 * [Bug tracker](https://github.com/strophe/strophejs/issues)
@@ -19,10 +19,10 @@ to enable web-based, real-time XMPP applications that run in any browser.
 
 ## Official releases
 
-The latest release is **1.3.6**.
+The latest release is **1.4.0**.
 
-* [strophejs-1.3.6.tar.gz](https://github.com/strophe/strophejs/archive/v1.3.6.tar.gz)
-* [strophejs-1.3.6.zip](https://github.com/strophe/strophejs/archive/v1.3.6.zip)
+* [strophejs-1.4.0.tar.gz](https://github.com/strophe/strophejs/archive/v1.4.0.tar.gz)
+* [strophejs-1.4.0.zip](https://github.com/strophe/strophejs/archive/v1.4.0.zip)
 
 ## Latest Development Code
 
