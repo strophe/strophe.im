@@ -11,7 +11,7 @@ systems.
 
 # Quick Links
 
-* [Latest documentation](doc/0.9.2)
+* [Latest documentation](doc/0.10.0)
 * [GitHub project page](https://github.com/strophe/libstrophe)
 * [Mailing list](http://groups.google.com/group/libstrophe)
 * [Bug tracker](https://github.com/strophe/libstrophe/issues)
