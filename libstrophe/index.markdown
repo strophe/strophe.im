@@ -26,5 +26,5 @@ licenses.
 
 # Author
 
-[Jack Moffitt](http://metajack.im) is the original author and current
-maintainer of libstrophe.
+libstrophe was originally created by [Jack Moffitt](http://metajack.im)
+and has been maintained by the community since 2014.
