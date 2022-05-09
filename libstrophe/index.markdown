@@ -28,3 +28,11 @@ licenses.
 
 libstrophe was originally created by [Jack Moffitt](http://metajack.im)
 and has been maintained by the community since 2014.
+
+# Documentation
+
+Older versions of the documentation can be found here
+
+* [0.11.0](doc/0.11.0)
+* [0.10.0](doc/0.10.0)
+* [0.9.2](doc/0.9.2)
