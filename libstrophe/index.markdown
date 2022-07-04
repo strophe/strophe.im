@@ -11,7 +11,7 @@ systems.
 
 # Quick Links
 
-* [Latest documentation](doc/0.12.0)
+* [Latest documentation](doc/0.12.1)
 * [GitHub project page](https://github.com/strophe/libstrophe)
 * [Mailing list](http://groups.google.com/group/libstrophe)
 * [Bug tracker](https://github.com/strophe/libstrophe/issues)
@@ -33,6 +33,7 @@ and has been maintained by the community since 2014.
 
 Older versions of the documentation can be found here
 
+* [0.12.0](doc/0.12.0)
 * [0.11.0](doc/0.11.0)
 * [0.10.0](doc/0.10.0)
 * [0.9.2](doc/0.9.2)
