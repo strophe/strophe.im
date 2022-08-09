@@ -29,6 +29,22 @@ licenses.
 libstrophe was originally created by [Jack Moffitt](http://metajack.im)
 and has been maintained by the community since 2014.
 
+# Features
+
+* Authentication with [RFC4422](https://www.rfc-editor.org/rfc/rfc4422) `SASL`.
+
+	Supported methods are: `PLAIN`, `DIGEST-MD5`, `ANONYMOUS`, `SCRAM-SHA{1,256,512}`, `EXTERNAL`.
+
+* Secure connection with [TLS](https://www.rfc-editor.org/rfc/rfc8446)
+via [GnuTLS](https://gnutls.org/), [LibreSSL](https://www.libressl.org/),
+[OpenSSL](https://www.openssl.org/) or SCHANNEL (only on Windows).
+
+	Supported mechanisms are: `STARTTLS` on port `5222` and legacy mode on port `5223`.
+
+* TLS client authentication with [XEP-0178](https://xmpp.org/extensions/xep-0178.html) `SASL EXTERNAL` (only with GnuTLS, LibreSSL or OpenSSL).
+* Stream Management with [XEP-0198](https://xmpp.org/extensions/xep-0198.html).
+* DNS resolution via an internal implementation or [c-ares](https://c-ares.org/).
+
 # Documentation
 
 Older versions of the documentation can be found here
