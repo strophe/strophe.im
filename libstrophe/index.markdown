@@ -11,7 +11,7 @@ systems.
 
 # Quick Links
 
-* [Latest documentation](doc/0.12.2)
+* [Latest documentation](doc/0.12.3)
 * [GitHub project page](https://github.com/strophe/libstrophe)
 * [Mailing list](http://groups.google.com/group/libstrophe)
 * [Bug tracker](https://github.com/strophe/libstrophe/issues)
@@ -49,6 +49,7 @@ via [GnuTLS](https://gnutls.org/), [LibreSSL](https://www.libressl.org/),
 
 Older versions of the documentation can be found here
 
+* [0.12.2](doc/0.12.2)
 * [0.12.1](doc/0.12.1)
 * [0.12.0](doc/0.12.0)
 * [0.11.0](doc/0.11.0)
