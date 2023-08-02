@@ -27,13 +27,18 @@ licenses.
 # Author
 
 libstrophe was originally created by [Jack Moffitt](http://metajack.im)
-and has been maintained by the community since 2014.
+and has been maintained by him until 2014.
+After that [Dmitry Podgorny](mailto:pasis.ua@gmail.com) was the major
+maintainer until 2022, when he passed the maintainer hat over to
+[Steffen Jaeckel](mailto:gh@jaeckel.eu).
 
 # Features
 
 * Authentication with [RFC4422](https://www.rfc-editor.org/rfc/rfc4422) `SASL`.
 
 	Supported methods are: `PLAIN`, `DIGEST-MD5`, `ANONYMOUS`, `SCRAM-SHA{1,256,512}`, `EXTERNAL`.
+
+	Legacy authentication via `_xmpp_auth1` can be enabled if required (disabled by default).
 
 * Secure connection with [TLS](https://www.rfc-editor.org/rfc/rfc8446)
 via [GnuTLS](https://gnutls.org/), [LibreSSL](https://www.libressl.org/),
