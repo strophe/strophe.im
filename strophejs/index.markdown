@@ -9,7 +9,7 @@ to enable web-based, real-time XMPP applications that run in any browser.
 
 # Quick Links
 
-* [Latest documentation](doc/3.0.0)
+* [Latest documentation](doc/3.1.0/Strophe.html)
 * [GitHub project page](https://github.com/strophe/strophejs)
 * [Mailing list](http://groups.google.com/group/strophe)
 * [Bug tracker](https://github.com/strophe/strophejs/issues)

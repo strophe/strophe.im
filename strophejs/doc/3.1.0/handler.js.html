@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: handler.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: handler.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { getBareJidFromJid, handleError, isTagEqual } from './utils.js';
+
+/**
+ * _Private_ helper class for managing stanza handlers.
+ *
+ * A Handler encapsulates a user provided callback function to be
+ * executed when matching stanzas are received by the connection.
+ * Handlers can be either one-off or persistant depending on their
+ * return value. Returning true will cause a Handler to remain active, and
+ * returning false will remove the Handler.
+ *
+ * Users will not use Handler objects directly, but instead they
+ * will use {@link Connection.addHandler} and
+ * {@link Connection.deleteHandler}.
+ */
+class Handler {
+    /**
+     * @typedef {Object} HandlerOptions
+     * @property {boolean} [HandlerOptions.matchBareFromJid]
+     * @property {boolean} [HandlerOptions.ignoreNamespaceFragment]
+     */
+
+    /**
+     * Create and initialize a new Handler.
+     *
+     * @param {Function} handler - A function to be executed when the handler is run.
+     * @param {string} ns - The namespace to match.
+     * @param {string} name - The element name to match.
+     * @param {string|string[]} type - The stanza type (or types if an array) to match.
+     * @param {string} [id] - The element id attribute to match.
+     * @param {string} [from] - The element from attribute to match.
+     * @param {HandlerOptions} [options] - Handler options
+     */
+    constructor(handler, ns, name, type, id, from, options) {
+        this.handler = handler;
+        this.ns = ns;
+        this.name = name;
+        this.type = type;
+        this.id = id;
+        this.options = options || { 'matchBareFromJid': false, 'ignoreNamespaceFragment': false };
+        if (this.options.matchBareFromJid) {
+            this.from = from ? getBareJidFromJid(from) : null;
+        } else {
+            this.from = from;
+        }
+        // whether the handler is a user handler or a system handler
+        this.user = true;
+    }
+
+    /**
+     * Returns the XML namespace attribute on an element.
+     * If `ignoreNamespaceFragment` was passed in for this handler, then the
+     * URL fragment will be stripped.
+     * @param {Element} elem - The XML element with the namespace.
+     * @return {string} - The namespace, with optionally the fragment stripped.
+     */
+    getNamespace(elem) {
+        let elNamespace = elem.getAttribute('xmlns');
+        if (elNamespace &amp;&amp; this.options.ignoreNamespaceFragment) {
+            elNamespace = elNamespace.split('#')[0];
+        }
+        return elNamespace;
+    }
+
+    /**
+     * Tests if a stanza element (or any of its children) matches the
+     * namespace set for this Handler.
+     * @param {Element} elem - The XML element to test.
+     * @return {boolean} - true if the stanza matches and false otherwise.
+     */
+    namespaceMatch(elem) {
+        if (!this.ns || this.getNamespace(elem) === this.ns) {
+            return true;
+        }
+        for (const child of elem.children ?? []) {
+            if (this.getNamespace(child) === this.ns) {
+                return true;
+            } else if (this.namespaceMatch(child)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Tests if a stanza matches the Handler.
+     * @param {Element} elem - The XML element to test.
+     * @return {boolean} - true if the stanza matches and false otherwise.
+     */
+    isMatch(elem) {
+        let from = elem.getAttribute('from');
+        if (this.options.matchBareFromJid) {
+            from = getBareJidFromJid(from);
+        }
+        const elem_type = elem.getAttribute('type');
+        if (
+            this.namespaceMatch(elem) &amp;&amp;
+            (!this.name || isTagEqual(elem, this.name)) &amp;&amp;
+            (!this.type ||
+                (Array.isArray(this.type) ? this.type.indexOf(elem_type) !== -1 : elem_type === this.type)) &amp;&amp;
+            (!this.id || elem.getAttribute('id') === this.id) &amp;&amp;
+            (!this.from || from === this.from)
+        ) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Run the callback on a matching stanza.
+     * @param {Element} elem - The DOM element that triggered the Handler.
+     * @return {boolean} - A boolean indicating if the handler should remain active.
+     */
+    run(elem) {
+        let result = null;
+        try {
+            result = this.handler(elem);
+        } catch (e) {
+            handleError(e);
+            throw e;
+        }
+        return result;
+    }
+
+    /**
+     * Get a String representation of the Handler object.
+     * @return {string}
+     */
+    toString() {
+        return '{Handler: ' + this.handler + '(' + this.name + ',' + this.id + ',' + this.ns + ')}';
+    }
+}
+
+export default Handler;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="Strophe.html">Strophe</a></li></ul><h3>Classes</h3><ul><li><a href="Bosh.html">Bosh</a></li><li><a href="Builder.html">Builder</a></li><li><a href="ConnectionManager.html">ConnectionManager</a></li><li><a href="Handler.html">Handler</a></li><li><a href="Request.html">Request</a></li><li><a href="SASLAnonymous.html">SASLAnonymous</a></li><li><a href="SASLExternal.html">SASLExternal</a></li><li><a href="SASLMechanism.html">SASLMechanism</a></li><li><a href="SASLOAuthBearer.html">SASLOAuthBearer</a></li><li><a href="SASLPlain.html">SASLPlain</a></li><li><a href="SASLSHA1.html">SASLSHA1</a></li><li><a href="SASLSHA256.html">SASLSHA256</a></li><li><a href="SASLSHA384.html">SASLSHA384</a></li><li><a href="SASLSHA512.html">SASLSHA512</a></li><li><a href="SessionError.html">SessionError</a></li><li><a href="Stanza.html">Stanza</a></li><li><a href="Strophe.Connection.html">Connection</a></li><li><a href="Strophe.TimedHandler.html">TimedHandler</a></li><li><a href="Websocket.html">Websocket</a></li><li><a href="WorkerWebsocket.html">WorkerWebsocket</a></li></ul><h3>Global</h3><ul><li><a href="global.html#$build">$build</a></li><li><a href="global.html#$iq">$iq</a></li><li><a href="global.html#$msg">$msg</a></li><li><a href="global.html#$pres">$pres</a></li><li><a href="global.html#ElementType">ElementType</a></li><li><a href="global.html#XHTML">XHTML</a></li><li><a href="global.html#_requestId">_requestId</a></li><li><a href="global.html#_xmlGenerator">_xmlGenerator</a></li><li><a href="global.html#addCookies">addCookies</a></li><li><a href="global.html#arrayBufToBase64">arrayBufToBase64</a></li><li><a href="global.html#base64ToArrayBuf">base64ToArrayBuf</a></li><li><a href="global.html#connectionPlugins">connectionPlugins</a></li><li><a href="global.html#createFromHtmlElement">createFromHtmlElement</a></li><li><a href="global.html#generate_cnonce">generate_cnonce</a></li><li><a href="global.html#getDOMParserImplementation">getDOMParserImplementation</a></li><li><a href="global.html#getDummyXMLDOMDocument">getDummyXMLDOMDocument</a></li><li><a href="global.html#getFirstElementChild">getFirstElementChild</a></li><li><a href="global.html#getParserError">getParserError</a></li><li><a href="global.html#getWebSocketImplementation">getWebSocketImplementation</a></li><li><a href="global.html#getXMLSerializerImplementation">getXMLSerializerImplementation</a></li><li><a href="global.html#handleError">handleError</a></li><li><a href="global.html#manager">manager</a></li><li><a href="global.html#scramClientProof">scramClientProof</a></li><li><a href="global.html#scramDeriveKeys">scramDeriveKeys</a></li><li><a href="global.html#scramParseChallenge">scramParseChallenge</a></li><li><a href="global.html#scramServerSign">scramServerSign</a></li><li><a href="global.html#stringToArrayBuf">stringToArrayBuf</a></li><li><a href="global.html#stx">stx</a></li><li><a href="global.html#toElement">toElement</a></li><li><a href="global.html#utf16to8">utf16to8</a></li><li><a href="global.html#xmlElement">xmlElement</a></li><li><a href="global.html#xmlGenerator">xmlGenerator</a></li><li><a href="global.html#xmlHtmlNode">xmlHtmlNode</a></li><li><a href="global.html#xmlTextNode">xmlTextNode</a></li><li><a href="global.html#xorArrayBuffers">xorArrayBuffers</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Mon Dec 16 2024 09:28:18 GMT+0200 (GMT+02:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
