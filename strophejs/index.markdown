@@ -9,20 +9,20 @@ to enable web-based, real-time XMPP applications that run in any browser.
 
 # Quick Links
 
-* [Latest documentation](doc/3.1.0/Strophe.html)
-* [GitHub project page](https://github.com/strophe/strophejs)
-* [Mailing list](http://groups.google.com/group/strophe)
-* [Bug tracker](https://github.com/strophe/strophejs/issues)
-* [Community plugins](http://github.com/strophe/strophejs-plugins)
+- [Latest documentation](doc/3.1.0/Strophe.html)
+- [GitHub project page](https://github.com/strophe/strophejs)
+- [Mailing list](http://groups.google.com/group/strophe)
+- [Bug tracker](https://github.com/strophe/strophejs/issues)
+- [Community plugins](http://github.com/strophe/strophejs-plugins)
 
 # Downloads
 
 ## Official releases
 
-The latest release is **4.0.0**.
+The latest release is **4.1.0**.
 
-* [strophejs-4.0.0.tar.gz](https://github.com/strophe/strophejs/archive/v4.0.0.tar.gz)
-* [strophejs-4.0.0.zip](https://github.com/strophe/strophejs/archive/v4.0.0.zip)
+- [strophejs-4.1.0.tar.gz](https://github.com/strophe/strophejs/archive/v4.1.0.tar.gz)
+- [strophejs-4.1.0.zip](https://github.com/strophe/strophejs/archive/v4.1.0.zip)
 
 ## Latest Development Code
 
@@ -30,15 +30,15 @@ Note that the following archives aren't not prepared for
 distribution. In order to create `strophe.js` and other derived files,
 you must first run `make`.
 
-* [strophejs-latest.tar.gz](https://github.com/strophe/strophejs/tarball/master)
-* [strophejs-latest.zip](https://github.com/strophe/strophejs/zipball/master)
+- [strophejs-latest.tar.gz](https://github.com/strophe/strophejs/tarball/master)
+- [strophejs-latest.zip](https://github.com/strophe/strophejs/zipball/master)
 
 # Documentation & Tutorials
 
 The following tutorials may help you get started:
 
-* [A short tutorial on Echobot by Alfred Westerveld](https://gist.github.com/272956)
-* [Anders Conbere's guide to BOSH, ejabberd, Firefox, and Strophe](http://anders.conbere.org/2011/05/03/get_xmpp_-_bosh_working_with_ejabberd_firefox_and_strophe.html)
+- [A short tutorial on Echobot by Alfred Westerveld](https://gist.github.com/272956)
+- [Anders Conbere's guide to BOSH, ejabberd, Firefox, and Strophe](http://anders.conbere.org/2011/05/03/get_xmpp_-_bosh_working_with_ejabberd_firefox_and_strophe.html)
 
 The official API documentation can be found below:
 
